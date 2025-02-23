@@ -58,6 +58,10 @@ If you're looking for remote PHP job opportunities, here are some great websites
 
 Explore these platforms to find PHP jobs that suit your skills and preferences. Whether you're looking for full-time or freelance opportunities, these websites will help you in your search!
 
+# Finding Remote Jobs on LinkedIn, Glassdoor, and Upwork
+
+Another great way to find remote jobs is by using [LinkedIn](https://www.linkedin.com/jobs), [Glassdoor](https://www.glassdoor.com/Job/index.htm), and [Upwork](https://www.upwork.com/). Simply search for any job and apply the remote filter on these websites to find your next remote opportunity. Just search for jobs, filter for **remote**, and boom—you’re ready to browse and apply. These steps work across most job platform.
+
 ## 🎯 Contributing
 - If you know a company that offers remote PHP jobs, feel free to submit a PR!
 

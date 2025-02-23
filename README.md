@@ -42,6 +42,22 @@ Are you a PHP developer looking for a remote job? This repository provides a cur
 
 ---
 
+# General Websites for Finding Remote Jobs
+
+If you're looking for remote PHP job opportunities, here are some great websites to explore:
+
+1. **[We Work Remotely](https://weworkremotely.com/)**
+2. **[Remote OK](https://remoteok.io/)**
+3. **[FlexJobs](https://www.flexjobs.com/)**
+4. **[wellfound](https://wellfound.com/jobs)**
+5. **[Remotive](https://remotive.io/)**
+6. **[Jobspresso](https://jobspresso.co/)**
+7. **[Working Nomads](https://www.workingnomads.co/)**
+8. **[Remote.co](https://remote.co/)**
+9. **[SkipTheDrive](https://www.skipthedrive.com/)**
+
+Explore these platforms to find PHP jobs that suit your skills and preferences. Whether you're looking for full-time or freelance opportunities, these websites will help you in your search!
+
 ## 🎯 Contributing
 - If you know a company that offers remote PHP jobs, feel free to submit a PR!
 

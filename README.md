@@ -44,6 +44,11 @@ Are you a PHP developer looking for a remote job? This repository provides a cur
 #### 🔍 Looking for a remote PHP job? Start exploring these companies today!
 ---
 
+# Top Framework-Specific Job Platforms
+Explore these framework-specific job platforms to find job opportunities tailored to Symfony and Laravel developers.
+1. **[Symfony Jobs](https://symfony.com/jobs)**
+2. **[Laravel Jobs](https://larajobs.com/)**
+
 # General Websites for Finding Remote Jobs
 
 If you're looking for remote PHP job opportunities, here are some great websites to explore:
@@ -57,6 +62,7 @@ If you're looking for remote PHP job opportunities, here are some great websites
 7. **[Working Nomads](https://www.workingnomads.co/)**
 8. **[Remote.co](https://remote.co/)**
 9. **[SkipTheDrive](https://www.skipthedrive.com/)**
+10. **[Remote Rocketship](https://www.remoterocketship.com/)**
 
 Explore these platforms to find PHP jobs that suit your skills and preferences. Whether you're looking for full-time or freelance opportunities, these websites will help you in your search!
 
@@ -65,7 +71,7 @@ Explore these platforms to find PHP jobs that suit your skills and preferences. 
 Another great way to find remote jobs is by using [LinkedIn](https://www.linkedin.com/jobs), [Glassdoor](https://www.glassdoor.com/Job/index.htm), and [Upwork](https://www.upwork.com/). Simply search for any job and apply the remote filter on these websites to find your next remote opportunity. Just search for jobs, filter for **remote**, and boom—you’re ready to browse and apply. These steps work across most job platform.
 
 ## 🎯 Contributing
-- If you know a company that offers remote PHP jobs, feel free to submit a PR!
+If you know a company that offers remote PHP jobs, feel free to submit a PR!
 
 ## 📢 Disclaimer
 These companies may have other positions and tech stacks, but at some point, they had open PHP positions. This list does not reflect real-time job openings. Be sure to check their career pages for the latest job openings.

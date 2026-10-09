@@ -1,5 +1,6 @@
 const STALE_MONTHS = 6;
 const DEFAULT_SORT = 'newest';
+const NO_OPENINGS = 'no-active-openings';
 
 const form = document.getElementById('filters');
 const results = document.getElementById('results');
@@ -17,7 +18,9 @@ const staleCutoff = (() => {
 const isSafeUrl = (url) => /^https?:\/\//i.test(url);
 
 const searchText = (company) =>
-  [company.name, ...company.industries, ...company.benefits].join(' ').toLowerCase();
+  [company.name, ...company.industries, ...company.benefits, company.status === NO_OPENINGS ? 'no active openings' : '']
+    .join(' ')
+    .toLowerCase();
 
 const sorters = {
   name: (a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: 'base' }),
@@ -33,6 +36,7 @@ function readState() {
     sort: data.get('sort') || DEFAULT_SORT,
     benefits: data.has('benefits'),
     recent: data.has('recent'),
+    open: data.has('open'),
   };
 }
 
@@ -43,6 +47,7 @@ function writeState(state) {
   if (state.sort !== DEFAULT_SORT) params.set('sort', state.sort);
   if (state.benefits) params.set('benefits', '1');
   if (state.recent) params.set('recent', '1');
+  if (state.open) params.set('open', '1');
   const query = params.toString();
   history.replaceState(null, '', query ? `?${query}` : location.pathname);
 }
@@ -54,6 +59,7 @@ function restoreState() {
   form.sort.value = sorters[params.get('sort')] ? params.get('sort') : DEFAULT_SORT;
   form.benefits.checked = params.get('benefits') === '1';
   form.recent.checked = params.get('recent') === '1';
+  form.open.checked = params.get('open') === '1';
 }
 
 function fillIndustries(companies) {
@@ -87,6 +93,11 @@ function renderCard(company) {
   const name = card.querySelector('.name a');
   name.textContent = company.name;
   if (isSafeUrl(company.url)) name.href = company.url;
+
+  if (company.status === NO_OPENINGS) {
+    card.classList.add('no-openings');
+    card.querySelector('.status').hidden = false;
+  }
 
   const chips = card.querySelector('.chips');
   for (const industry of company.industries) {
@@ -126,6 +137,7 @@ function render(companies) {
     .filter((company) => !state.industry || company.industries.includes(state.industry))
     .filter((company) => !state.benefits || company.benefits.length > 0)
     .filter((company) => !state.recent || company.last_verified >= staleCutoff)
+    .filter((company) => !state.open || company.status !== NO_OPENINGS)
     .filter((company) => terms.every((term) => company.search.includes(term)))
     .sort(sorters[state.sort]);
 

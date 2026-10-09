@@ -50,6 +50,7 @@ All company data lives in [`companies.yml`](companies.yml). The table in the REA
 |-----------------|----------|----------------------------------------------------------------------------------|
 | `name`          | Yes      | Company name as the company writes it.                                           |
 | `url`           | Yes      | Careers or jobs page.                                                            |
+| `status`        | No       | Set to `no-active-openings` when the company has no open PHP roles right now. Leave it out otherwise. |
 | `industries`    | Yes      | One or more industries, as a list.                                               |
 | `benefits`      | No       | Notable benefits, one per list item. Leave the field out if you do not know any. |
 | `linkedin`      | Yes      | The company's LinkedIn jobs page.                                                |
@@ -60,7 +61,7 @@ Validation rejects unknown fields, invalid URLs, dates in the future and duplica
 
 ## Re-verify an existing entry
 
-Every entry has a `last_verified` date. To refresh one, check that the company still meets the criteria, then update `last_verified` to today's date in a pull request. If the company no longer qualifies, remove the entry instead.
+Every entry has a `last_verified` date. To refresh one, check that the company still meets the criteria, then update `last_verified` to today's date in a pull request. If the company still qualifies but has nothing open at the moment, add `status: no-active-openings`, and remove it again when new roles appear. If the company no longer qualifies, remove the entry instead.
 
 Once a week, a workflow opens (or updates) an issue labelled `stale-entries` that lists every company not verified in the last 6 months. Picking items from that issue is a great first contribution.
 

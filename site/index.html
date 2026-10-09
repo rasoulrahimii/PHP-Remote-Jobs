@@ -62,6 +62,7 @@
       <div class="toggles">
         <label class="toggle"><input type="checkbox" name="benefits"> Lists benefits</label>
         <label class="toggle"><input type="checkbox" name="recent"> Verified in the last 6 months</label>
+        <label class="toggle"><input type="checkbox" name="open"> Hide no active openings</label>
       </div>
     </form>
 
@@ -75,7 +76,10 @@
 
   <template id="card">
     <li class="card">
-      <h2 class="name"><a target="_blank" rel="noopener"></a></h2>
+      <div class="card-head">
+        <h2 class="name"><a target="_blank" rel="noopener"></a></h2>
+        <span class="status" hidden>No active openings</span>
+      </div>
       <ul class="chips"></ul>
       <ul class="benefits"></ul>
       <div class="meta">

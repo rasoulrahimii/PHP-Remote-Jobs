@@ -4,6 +4,7 @@
   --text: #1d1d2b;
   --muted: #5d5f73;
   --border: #e2e3ec;
+  --border-strong: #b9bbcc;
   --accent: #5b5bd6;
   --accent-text: #ffffff;
   --chip-bg: #ececfb;
@@ -24,6 +25,7 @@
     --text: #ececf4;
     --muted: #a3a5b8;
     --border: #2d2e3d;
+    --border-strong: #4a4c63;
     --accent: #8c8cf0;
     --accent-text: #12121a;
     --chip-bg: #2a2a45;
@@ -43,6 +45,7 @@
   --text: #ececf4;
   --muted: #a3a5b8;
   --border: #2d2e3d;
+  --border-strong: #4a4c63;
   --accent: #8c8cf0;
   --accent-text: #12121a;
   --chip-bg: #2a2a45;
@@ -298,6 +301,27 @@ a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background: var(--surface);
+}
+
+.card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px 12px;
+}
+
+.status {
+  padding: 2px 10px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.card.no-openings .name a {
+  color: var(--muted);
 }
 
 .name {

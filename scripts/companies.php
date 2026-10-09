@@ -11,7 +11,9 @@ const DATA_FILE = __DIR__ . '/../companies.yml';
 const README_FILE = __DIR__ . '/../README.md';
 const TABLE_START = '<!-- companies:start -->';
 const TABLE_END = '<!-- companies:end -->';
-const FIELDS = ['name', 'url', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
+const FIELDS = ['name', 'url', 'status', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
+const STATUSES = ['active', 'no-active-openings'];
+const STATUS_LABELS = ['no-active-openings' => 'no active openings'];
 const TABLE_HEADER = ['Company', 'Industry', 'Benefits', 'LinkedIn', 'Glassdoor', 'Last verified'];
 const DEFAULT_STALE_MONTHS = 6;
 
@@ -29,7 +31,7 @@ final class InvalidData extends RuntimeException
 }
 
 /**
- * @return list<array{name: string, url: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}>
+ * @return list<array{name: string, url: string, status: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}>
  */
 function loadCompanies(): array
 {
@@ -69,7 +71,7 @@ function loadCompanies(): array
 
 /**
  * @param list<string> $errors
- * @return ?array{name: string, url: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}
+ * @return ?array{name: string, url: string, status: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}
  */
 function normalizeCompany(mixed $entry, string $label, array &$errors): ?array
 {
@@ -88,6 +90,7 @@ function normalizeCompany(mixed $entry, string $label, array &$errors): ?array
     $company = [
         'name' => text($entry, 'name', $label, $errors),
         'url' => url($entry, 'url', $label, $errors, true),
+        'status' => status($entry, $label, $errors),
         'industries' => textList($entry, 'industries', $label, $errors, true),
         'benefits' => textList($entry, 'benefits', $label, $errors, false),
         'linkedin' => url($entry, 'linkedin', $label, $errors, true),
@@ -132,6 +135,22 @@ function url(array $entry, string $field, string $label, array &$errors, bool $r
     $scheme = parse_url($value, PHP_URL_SCHEME);
     if (filter_var($value, FILTER_VALIDATE_URL) === false || !in_array($scheme, ['http', 'https'], true)) {
         $errors[] = sprintf('%s: "%s" must be a valid http(s) URL, got "%s".', $label, $field, $value);
+
+        return null;
+    }
+
+    return $value;
+}
+
+/**
+ * @param array<string, mixed> $entry
+ * @param list<string> $errors
+ */
+function status(array $entry, string $label, array &$errors): ?string
+{
+    $value = $entry['status'] ?? STATUSES[0];
+    if (!is_string($value) || !in_array($value, STATUSES, true)) {
+        $errors[] = sprintf('%s: "status" must be one of: %s.', $label, implode(', ', STATUSES));
 
         return null;
     }
@@ -228,7 +247,8 @@ function renderTable(array $companies): string
     $rows = [TABLE_HEADER];
     foreach ($companies as $company) {
         $rows[] = array_map(escapeCell(...), [
-            sprintf('[%s](%s)', $company['name'], $company['url']),
+            sprintf('[%s](%s)', $company['name'], $company['url'])
+                . (isset(STATUS_LABELS[$company['status']]) ? sprintf(' _(%s)_', STATUS_LABELS[$company['status']]) : ''),
             implode(', ', $company['industries']),
             $company['benefits'] === [] ? '-' : implode('; ', $company['benefits']),
             sprintf('[LinkedIn](%s)', $company['linkedin']),

@@ -1,5 +1,6 @@
 - name: 10up
   url: https://10up.com/careers/
+  status: no-active-openings
   industries:
     - Web
   benefits:
@@ -12,6 +13,7 @@
 
 - name: Agent Legend
   url: https://agentlegend.com/
+  status: no-active-openings
   industries:
     - AI
   linkedin: https://www.linkedin.com/company/agent-legend/jobs/
@@ -33,6 +35,7 @@
 
 - name: Awesome Motive
   url: https://awesomemotive.com/careers/#positions
+  status: no-active-openings
   industries:
     - Web
     - User Experience
@@ -48,6 +51,7 @@
 
 - name: BlockLabs
   url: https://www.blocklabs.io/
+  status: no-active-openings
   industries:
     - Web3 Incubator & Investment
   benefits:
@@ -57,6 +61,7 @@
 
 - name: Bookinglayer
   url: https://www.bookinglayer.com/careers/
+  status: no-active-openings
   industries:
     - Booking Software
   benefits:
@@ -67,6 +72,7 @@
 
 - name: Buckhill
   url: https://www.buckhill.co.uk/about/careers/departments-and-positions
+  status: no-active-openings
   industries:
     - Insurance Software Platforms
   benefits:
@@ -77,6 +83,7 @@
 
 - name: Chess.com
   url: https://www.chess.com/jobs
+  status: no-active-openings
   industries:
     - Online Game Publishing
   linkedin: https://www.linkedin.com/company/chess-com/jobs/
@@ -299,6 +306,7 @@
 
 - name: Springloaded
   url: https://springloaded.co/jobs
+  status: no-active-openings
   industries:
     - Software
   linkedin: https://www.linkedin.com/company/springloaded/jobs/
@@ -317,6 +325,7 @@
 
 - name: Tixel
   url: https://tixel.com/
+  status: no-active-openings
   industries:
     - Ticket Marketplace
     - Live Events
@@ -326,6 +335,7 @@
 
 - name: Trustfactory
   url: https://trustfactory.de/karriere/
+  status: no-active-openings
   industries:
     - Digital marketing & SEO agency
   linkedin: https://www.linkedin.com/company/trustfactoryde/jobs/

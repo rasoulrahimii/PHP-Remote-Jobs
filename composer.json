@@ -1,0 +1,16 @@
+{
+    "name": "rasoulrahimii/php-remote-jobs",
+    "description": "Curated list of companies hiring remote PHP developers",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.2",
+        "symfony/yaml": "^7.0"
+    },
+    "config": {
+        "platform": {
+            "php": "8.2"
+        },
+        "sort-packages": true
+    }
+}

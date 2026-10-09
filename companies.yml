@@ -1,0 +1,347 @@
+- name: 10up
+  url: https://10up.com/careers/
+  industries:
+    - Web
+  benefits:
+    - Paid parental leave
+    - Professional development budget
+    - Annual all-team Summit
+  linkedin: https://www.linkedin.com/company/10up/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-10up-EI_IE775906.11,15.htm
+  last_verified: 2025-02-23
+
+- name: Agent Legend
+  url: https://agentlegend.com/
+  industries:
+    - AI
+  linkedin: https://www.linkedin.com/company/agent-legend/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Agent-Legend-EI_IE1719438.11,23.htm
+  last_verified: 2025-10-01
+
+- name: Automattic
+  url: https://automattic.com/work-with-us/
+  industries:
+    - Web
+  benefits:
+    - Anniversary awards
+    - Wellness benefits
+    - Career coaching
+    - Life insurance
+  linkedin: https://www.linkedin.com/company/automattic/jobs/
+  glassdoor: https://www.glassdoor.sg/Overview/Working-at-Automattic-EI_IE751107.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Awesome Motive
+  url: https://awesomemotive.com/careers/#positions
+  industries:
+    - Web
+    - User Experience
+  benefits:
+    - Paid parental leave
+    - Profit dividend
+    - Tech stipend
+    - Life insurance
+    - Health, Dental & Vision Insurance
+  linkedin: https://www.linkedin.com/company/awesome-motive-inc./jobs/
+  glassdoor: https://www.glassdoor.sg/Overview/Working-at-Awesome-Motive-EI_IE2048106.11,25.htm
+  last_verified: 2025-02-23
+
+- name: BlockLabs
+  url: https://www.blocklabs.io/
+  industries:
+    - Web3 Incubator & Investment
+  benefits:
+    - 30 days of annual leave
+  linkedin: https://www.linkedin.com/company/block-labs-web3/jobs/
+  last_verified: 2025-09-04
+
+- name: Bookinglayer
+  url: https://www.bookinglayer.com/careers/
+  industries:
+    - Booking Software
+  benefits:
+    - One team meetup a year, flexible working hours
+  linkedin: https://www.linkedin.com/company/bookinglayer/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Bookinglayer-EI_IE9369500.11,23.htm
+  last_verified: 2025-02-23
+
+- name: Buckhill
+  url: https://www.buckhill.co.uk/about/careers/departments-and-positions
+  industries:
+    - Insurance Software Platforms
+  benefits:
+    - 'Working schedule flexibility, Sponsored professional learning, Fully covered sick leave, Salary range for Senior Software Developer: €50.3k – €94.3k'
+  linkedin: https://www.linkedin.com/company/buckhill-software/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Buckhill-EI_IE993950.11,19.htm
+  last_verified: 2025-10-01
+
+- name: Chess.com
+  url: https://www.chess.com/jobs
+  industries:
+    - Online Game Publishing
+  linkedin: https://www.linkedin.com/company/chess-com/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Chess-com-EI_IE2241778.11,20.htm
+  last_verified: 2025-02-23
+
+- name: Coaching.com
+  url: https://www.coaching.com/
+  industries:
+    - Online Coaching Platform
+  linkedin: https://www.linkedin.com/company/coachingdotcom/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Coaching-com-EI_IE5399613.11,23.htm
+  last_verified: 2025-02-23
+
+- name: CobbleWeb
+  url: https://www.cobbleweb.co.uk/recruitment/#job_list
+  industries:
+    - Software
+  linkedin: https://www.linkedin.com/company/cobbleweb/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-CobbleWeb-EI_IE3292066.11,20.htm
+  last_verified: 2025-02-23
+
+- name: Cody AI
+  url: https://meetcody.ai/
+  industries:
+    - Enterprise AI Solutions
+  benefits:
+    - 100k-140k USD per year for Senior Laravel Developer
+  linkedin: https://www.linkedin.com/company/meetcodyai/jobs/
+  last_verified: 2025-02-23
+
+- name: Fandom
+  url: https://about.fandom.com/careers
+  industries:
+    - Entertainment
+  benefits:
+    - Flexible working hours and time off, Paid Parental Leave, Training (unlimited Udemy + more), Comprehensive Medical, Dental, Vision
+  linkedin: https://www.linkedin.com/company/fandomwikia/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Fandom-EI_IE428648.11,17.htm
+  last_verified: 2025-02-23
+
+- name: Hospitable
+  url: https://apply.workable.com/hospitable/
+  industries:
+    - Software
+    - Service
+  benefits:
+    - 35 days off
+    - Parental leave
+    - Mental health and emotional support
+  linkedin: https://www.linkedin.com/company/hospitable/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Hospitable-EI_IE2148011.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Hostaway
+  url: https://hostaway.recruitee.com/
+  industries:
+    - Vacation Rental Software
+  benefits:
+    - Equity, Annual Paid Leave, Geographic Specific Benefits
+  linkedin: https://www.linkedin.com/company/hostaway/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Hostaway-EI_IE1358830.11,19.htm
+  last_verified: 2025-02-23
+
+- name: Interaction Design Foundation
+  url: https://www.interaction-design.org/about/careers
+  industries:
+    - Education
+    - UX/UI Design
+    - Innovation
+  benefits:
+    - Team trips
+    - Paid and flexible holidays
+    - Marathon stipend
+  linkedin: https://www.linkedin.com/company/ixdf-interaction-design-foundation-school/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Interaction-Design-Foundation-EI_IE1147112.11,40.htm
+  last_verified: 2025-02-23
+
+- name: Kirschbaum
+  url: https://kirschbaumdevelopment.com/work
+  industries:
+    - Software Solutions
+  benefits:
+    - Company computer, Paid vacation, Budget for books/conferences, Paid holidays, Health, dental & vision insurance, Paid open-source time, Maternity / paternity leave
+  linkedin: https://www.linkedin.com/company/kirschbaumdevelopment/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Kirschbaum-EI_IE8311634.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Lokalise
+  url: https://lokalise.com/careers
+  industries:
+    - Technology
+    - AI
+  benefits:
+    - Coworking allowance
+    - Health insurance
+    - Home office setup
+    - Parental leave
+    - Stock options
+  linkedin: https://www.linkedin.com/company/lokalise/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Lokalise-EI_IE3398432.11,19.htm
+  last_verified: 2025-02-23
+
+- name: MailerLite
+  url: https://www.mailerlite.com/jobs
+  industries:
+    - Email Automations
+  benefits:
+    - 'International health insurance, 31 days of vacation per year, Yearly gross salary range: $55,000-$65,000'
+  linkedin: https://www.linkedin.com/company/mailerlite-international/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-MailerLite-EI_IE1504754.11,21.htm
+  last_verified: 2025-10-01
+
+- name: Matomo
+  url: https://matomo.org/jobs/
+  industries:
+    - Technology
+    - Analytics
+  benefits:
+    - Flexible hours
+    - Paid certifications & training as applicable
+  linkedin: https://www.linkedin.com/company/matomo/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Matomo-EI_IE9336278.11,17.htm
+  last_verified: 2025-02-23
+
+- name: Modus Create
+  url: https://moduscreate.com/careers/
+  industries:
+    - Consulting
+    - Digital
+  benefits:
+    - Travel according to client's needs
+    - Employee Referral Program
+  linkedin: https://www.linkedin.com/company/modus-create/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Modus-Create-EI_IE718505.11,23.htm
+  last_verified: 2025-02-23
+
+- name: Nagarro
+  url: https://www.nagarro.com/en/careers
+  industries:
+    - Technology
+  linkedin: https://www.linkedin.com/company/nagarro/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Nagarro-EI_IE240077.11,18.htm
+  last_verified: 2025-02-23
+
+- name: Nordhealth
+  url: https://nordhealth.com/careers/
+  industries:
+    - Digital Healthcare
+  benefits:
+    - Team offsites
+    - Home office stipend
+    - Latest hardware and software
+  linkedin: https://www.linkedin.com/company/nordhealth/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Nordhealth-EI_IE6350968.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Printify
+  url: https://jobs.printify.com/jobs/
+  industries:
+    - Print on Demand
+  benefits:
+    - Relocation Support, Health insurance
+  linkedin: https://www.linkedin.com/company/printify/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Printify-EI_IE3094843.11,19.htm
+  last_verified: 2025-02-23
+
+- name: Proxify
+  url: https://career.proxify.io/
+  industries:
+    - Technology
+  linkedin: https://www.linkedin.com/showcase/proxify-developers/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Proxify-EI_IE4090194.11,18.htm
+  last_verified: 2025-02-23
+
+- name: RapidSeedbox Ltd
+  url: https://www.rapidseedbox.com/jobs
+  industries:
+    - Software
+  benefits:
+    - Personal development fund
+    - Unlimited vacation
+    - Company retreats
+  linkedin: https://www.rapidseedbox.com/jobs
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-RapidSeedbox-EI_IE1446416.11,23.htm
+  last_verified: 2025-02-23
+
+- name: RebelCode
+  url: https://rebelcode.com/careers/
+  industries:
+    - Digital
+  benefits:
+    - Conferences
+    - Team meet-ups and retreats
+  linkedin: https://www.linkedin.com/company/rebelcode/jobs/
+  last_verified: 2025-02-23
+
+- name: SecureIT Swiss
+  url: https://jobs.secureit.ch/
+  industries:
+    - IT Security
+    - SaaS
+  linkedin: https://www.linkedin.com/company/secureit-swiss-ag/jobs/
+  last_verified: 2026-09-26
+
+- name: SEO Sherpa
+  url: https://seosherpa.com/careers/
+  industries:
+    - SEO
+    - Digital
+    - PR
+  benefits:
+    - 100% health cover
+    - Profit share
+    - Unlimited free books
+    - Investment in gear
+  linkedin: https://www.linkedin.com/company/seo-sherpa/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-SEO-Sherpa-EI_IE4640375.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Sportserve
+  url: https://careers.sportserve.co/
+  industries:
+    - Sports Betting
+  linkedin: https://www.linkedin.com/company/asianlogic-ltd.---bayview-technologies/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Sportserve-EI_IE9173106.11,21.htm
+  last_verified: 2025-02-23
+
+- name: Springloaded
+  url: https://springloaded.co/jobs
+  industries:
+    - Software
+  linkedin: https://www.linkedin.com/company/springloaded/jobs/
+  last_verified: 2025-09-04
+
+- name: Tighten
+  url: https://tighten.com/careers/
+  industries:
+    - Software
+  benefits:
+    - Wellness Stipend
+    - Bi-annual Onsites
+    - Workspace Allowance
+  linkedin: https://www.linkedin.com/company/tightenco/jobs/
+  last_verified: 2025-02-23
+
+- name: Tixel
+  url: https://tixel.com/
+  industries:
+    - Ticket Marketplace
+    - Live Events
+  linkedin: https://www.linkedin.com/company/tixelofficial/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Tixel-EI_IE7186147.11,16.htm
+  last_verified: 2025-09-04
+
+- name: Trustfactory
+  url: https://trustfactory.de/karriere/
+  industries:
+    - Digital marketing & SEO agency
+  linkedin: https://www.linkedin.com/company/trustfactoryde/jobs/
+  last_verified: 2026-01-07
+
+- name: UserScape
+  url: https://userscape.com/
+  industries:
+    - Laravel / Open Source Software
+  linkedin: https://www.linkedin.com/company/userscape/jobs/
+  last_verified: 2025-02-23

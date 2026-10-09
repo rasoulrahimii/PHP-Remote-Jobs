@@ -2,6 +2,8 @@
 
 Are you a PHP developer looking for a remote job? This repository provides a curated list of companies that offer remote positions for PHP developers. Whether you specialize in Laravel, WordPress, general backend development, or fullstack development, this list can help you find your next opportunity.
 
+🔎 **Browse and filter the list at [rasoulrahimii.github.io/PHP-Remote-Jobs](https://rasoulrahimii.github.io/PHP-Remote-Jobs/).**
+
 ## 📌 How to Use This List
 - Browse the companies below.
 - Review company benefits and Glassdoor reviews for insights.

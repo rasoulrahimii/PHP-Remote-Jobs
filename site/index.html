@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remote PHP Jobs</title>
+  <meta name="description" content="A curated, filterable list of companies that hire remote PHP developers.">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <h1>Remote PHP Jobs</h1>
+      <p class="lede">Companies that have hired remote PHP developers, with links to their careers pages. Each entry shows when it was last checked by hand.</p>
+      <nav class="actions">
+        <a class="button primary" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs/issues/new?template=suggest-company.yml">Suggest a company</a>
+        <a class="button" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs">View on GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <form class="filters" id="filters" role="search">
+      <label class="field search">
+        <span>Search</span>
+        <input type="search" name="q" placeholder="Company, industry or benefit" autocomplete="off">
+      </label>
+      <label class="field">
+        <span>Industry</span>
+        <select name="industry">
+          <option value="">All industries</option>
+        </select>
+      </label>
+      <label class="field">
+        <span>Sort by</span>
+        <select name="sort">
+          <option value="name">Name</option>
+          <option value="newest">Newest check</option>
+          <option value="oldest">Oldest check</option>
+        </select>
+      </label>
+      <div class="toggles">
+        <label class="toggle"><input type="checkbox" name="benefits"> Lists benefits</label>
+        <label class="toggle"><input type="checkbox" name="recent"> Verified in the last 6 months</label>
+      </div>
+    </form>
+
+    <p class="summary" id="summary" aria-live="polite">Loading companies…</p>
+    <ul class="grid" id="results"></ul>
+  </main>
+
+  <footer class="wrap footer">
+    <p>Entries are checked by hand and may be out of date. Always confirm open roles on the company's own careers page. Spotted a problem? <a href="https://github.com/rasoulrahimii/PHP-Remote-Jobs/issues/new?template=report-problem.yml">Report it</a>.</p>
+  </footer>
+
+  <template id="card">
+    <li class="card">
+      <h2 class="name"><a target="_blank" rel="noopener"></a></h2>
+      <ul class="chips"></ul>
+      <ul class="benefits"></ul>
+      <div class="meta">
+        <span class="links"></span>
+        <time class="verified"></time>
+      </div>
+    </li>
+  </template>
+</body>
+</html>

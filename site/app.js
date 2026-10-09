@@ -4,6 +4,8 @@ const form = document.getElementById('filters');
 const results = document.getElementById('results');
 const summary = document.getElementById('summary');
 const template = document.getElementById('card');
+const themeToggle = document.getElementById('theme-toggle');
+const darkQuery = matchMedia('(prefers-color-scheme: dark)');
 
 const staleCutoff = (() => {
   const date = new Date();
@@ -138,6 +140,29 @@ function render(companies) {
   results.replaceChildren(...visible.map(renderCard));
 }
 
+function currentTheme() {
+  return document.documentElement.dataset.theme || (darkQuery.matches ? 'dark' : 'light');
+}
+
+function syncThemeToggle() {
+  const dark = currentTheme() === 'dark';
+  themeToggle.setAttribute('aria-checked', String(dark));
+  themeToggle.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+}
+
+function setupThemeToggle() {
+  syncThemeToggle();
+  darkQuery.addEventListener('change', syncThemeToggle);
+  themeToggle.addEventListener('click', () => {
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem('theme', next);
+    } catch (error) {}
+    syncThemeToggle();
+  });
+}
+
 async function main() {
   try {
     const response = await fetch('companies.json', { cache: 'no-cache' });
@@ -154,4 +179,5 @@ async function main() {
   }
 }
 
+setupThemeToggle();
 main();

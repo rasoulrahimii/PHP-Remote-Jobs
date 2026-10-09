@@ -12,11 +12,13 @@
   --stale-bg: #fff1e0;
   --fresh: #1d7a46;
   --radius: 12px;
+  --knob: #ffffff;
+  --knob-shadow: 0 2px 6px rgba(29, 29, 43, 0.25);
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #12121a;
     --surface: #1b1b26;
     --text: #ececf4;
@@ -29,8 +31,28 @@
     --stale: #ffb870;
     --stale-bg: #3a2914;
     --fresh: #6fd39b;
+    --knob: #e9e7ff;
+    --knob-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     color-scheme: dark;
   }
+}
+
+:root[data-theme="dark"] {
+  --bg: #12121a;
+  --surface: #1b1b26;
+  --text: #ececf4;
+  --muted: #a3a5b8;
+  --border: #2d2e3d;
+  --accent: #8c8cf0;
+  --accent-text: #12121a;
+  --chip-bg: #2a2a45;
+  --chip-text: #c4c4ff;
+  --stale: #ffb870;
+  --stale-bg: #3a2914;
+  --fresh: #6fd39b;
+  --knob: #e9e7ff;
+  --knob-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  color-scheme: dark;
 }
 
 * {
@@ -39,6 +61,7 @@
 
 body {
   margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
   background: var(--bg);
   color: var(--text);
   font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -56,12 +79,18 @@ a {
 
 .masthead {
   padding: 48px 0 32px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   border-bottom: 1px solid var(--border);
   background: var(--surface);
 }
 
+.masthead .wrap {
+  position: relative;
+}
+
 .masthead h1 {
   margin: 0 0 8px;
+  padding-right: 80px;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   letter-spacing: -0.02em;
 }
@@ -92,6 +121,111 @@ a {
   border-color: var(--accent);
   background: var(--accent);
   color: var(--accent-text);
+}
+
+.theme-toggle {
+  position: absolute;
+  top: -24px;
+  right: 16px;
+  width: 64px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  overflow: hidden;
+  cursor: pointer;
+  background: transparent;
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.25);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.theme-toggle .sky {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.4s ease;
+}
+
+.theme-toggle .day {
+  background: linear-gradient(135deg, #8fd0ff 0%, #c5e8ff 55%, #ffe3a3 100%);
+}
+
+.theme-toggle .night {
+  opacity: 0;
+  background:
+    radial-gradient(1px 1px at 14px 9px, #ffffff 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 22px 22px, #ffffff 50%, transparent 51%),
+    radial-gradient(1px 1px at 9px 20px, #dcdcff 50%, transparent 51%),
+    radial-gradient(1px 1px at 30px 12px, #ffffff 50%, transparent 51%),
+    linear-gradient(135deg, #1b1f4b 0%, #2c2466 60%, #4a2d74 100%);
+}
+
+.theme-toggle .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--knob);
+  box-shadow: var(--knob-shadow);
+  transition: transform 0.45s cubic-bezier(0.34, 1.4, 0.64, 1), background-color 0.3s ease;
+}
+
+.theme-toggle .icon {
+  position: absolute;
+  inset: 5px;
+  width: 18px;
+  height: 18px;
+  transition: opacity 0.3s ease, transform 0.45s ease;
+}
+
+.theme-toggle .sun {
+  color: #f59e0b;
+}
+
+.theme-toggle .moon {
+  color: #6d5dfc;
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.4);
+}
+
+.theme-toggle[aria-checked="true"] .day {
+  opacity: 0;
+}
+
+.theme-toggle[aria-checked="true"] .night {
+  opacity: 1;
+}
+
+.theme-toggle[aria-checked="true"] .knob {
+  transform: translateX(30px);
+}
+
+.theme-toggle[aria-checked="true"] .sun {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.4);
+}
+
+.theme-toggle[aria-checked="true"] .moon {
+  opacity: 1;
+  transform: none;
+}
+
+.theme-toggle:hover .knob {
+  box-shadow: var(--knob-shadow), 0 0 0 4px rgba(255, 255, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
 }
 
 .filters {
@@ -156,6 +290,7 @@ a {
 }
 
 .card {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -253,6 +388,10 @@ a {
 @media (max-width: 720px) {
   .masthead {
     padding: 32px 0 24px;
+  }
+
+  .theme-toggle {
+    top: -12px;
   }
 
   .filters {

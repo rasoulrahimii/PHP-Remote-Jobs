@@ -5,12 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Remote PHP Jobs</title>
   <meta name="description" content="A curated, filterable list of companies that hire remote PHP developers.">
+  <script>
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (error) {}
+  </script>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
 </head>
 <body>
   <header class="masthead">
     <div class="wrap">
+      <button type="button" class="theme-toggle" id="theme-toggle" role="switch" aria-checked="false" aria-label="Dark mode">
+        <span class="sky day"></span>
+        <span class="sky night"></span>
+        <span class="knob">
+          <svg class="icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="currentColor"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <svg class="icon moon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/>
+          </svg>
+        </span>
+      </button>
       <h1>Remote PHP Jobs</h1>
       <p class="lede">Companies that have hired remote PHP developers, with links to their careers pages. Each entry shows when it was last checked by hand.</p>
       <nav class="actions">

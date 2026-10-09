@@ -1,4 +1,5 @@
 const STALE_MONTHS = 6;
+const DEFAULT_SORT = 'newest';
 
 const form = document.getElementById('filters');
 const results = document.getElementById('results');
@@ -29,7 +30,7 @@ function readState() {
   return {
     q: (data.get('q') || '').trim(),
     industry: data.get('industry') || '',
-    sort: data.get('sort') || 'name',
+    sort: data.get('sort') || DEFAULT_SORT,
     benefits: data.has('benefits'),
     recent: data.has('recent'),
   };
@@ -39,7 +40,7 @@ function writeState(state) {
   const params = new URLSearchParams();
   if (state.q) params.set('q', state.q);
   if (state.industry) params.set('industry', state.industry);
-  if (state.sort !== 'name') params.set('sort', state.sort);
+  if (state.sort !== DEFAULT_SORT) params.set('sort', state.sort);
   if (state.benefits) params.set('benefits', '1');
   if (state.recent) params.set('recent', '1');
   const query = params.toString();
@@ -50,7 +51,7 @@ function restoreState() {
   const params = new URLSearchParams(location.search);
   form.q.value = params.get('q') || '';
   form.industry.value = params.get('industry') || '';
-  form.sort.value = sorters[params.get('sort')] ? params.get('sort') : 'name';
+  form.sort.value = sorters[params.get('sort')] ? params.get('sort') : DEFAULT_SORT;
   form.benefits.checked = params.get('benefits') === '1';
   form.recent.checked = params.get('recent') === '1';
 }

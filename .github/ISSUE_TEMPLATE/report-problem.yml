@@ -1,0 +1,28 @@
+name: Report a problem
+description: Report a dead link, wrong information or a company that no longer hires remote PHP developers.
+title: "Problem with "
+body:
+  - type: input
+    id: company
+    attributes:
+      label: Company
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong?
+      options:
+        - A link is broken
+        - The company no longer hires remote PHP developers
+        - Some information is wrong
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Which link or field is affected, and what it should be instead if you know.
+    validations:
+      required: true

@@ -1,0 +1,62 @@
+name: Suggest a company
+description: Propose a company that hires remote PHP developers.
+title: "Add "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Please check the [inclusion criteria](https://github.com/rasoulrahimii/PHP-Remote-Jobs/blob/main/CONTRIBUTING.md#inclusion-criteria) first.
+  - type: input
+    id: name
+    attributes:
+      label: Company name
+    validations:
+      required: true
+  - type: input
+    id: careers
+    attributes:
+      label: Careers page
+      description: Where the company lists its open positions.
+      placeholder: https://example.com/careers/
+    validations:
+      required: true
+  - type: input
+    id: evidence
+    attributes:
+      label: Remote PHP job post
+      description: A link to a remote PHP role posted in the last 12 months. An archived copy is fine if the post is gone.
+    validations:
+      required: true
+  - type: input
+    id: industries
+    attributes:
+      label: Industries
+      placeholder: SaaS, E-commerce
+    validations:
+      required: true
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Benefits
+      description: Optional. One benefit per line.
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn jobs page
+      placeholder: https://www.linkedin.com/company/example/jobs/
+  - type: input
+    id: glassdoor
+    attributes:
+      label: Glassdoor page
+      description: Optional.
+  - type: checkboxes
+    id: criteria
+    attributes:
+      label: Criteria
+      options:
+        - label: The company is the direct employer, not a recruiting agency or talent marketplace.
+          required: true
+        - label: The role is fully remote or remote within a broad region.
+          required: true
+        - label: The company is not already on the list.
+          required: true

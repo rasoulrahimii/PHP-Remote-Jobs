@@ -363,18 +363,18 @@ a {
 
 .icon-link {
   display: inline-flex;
+  color: var(--muted);
   border-radius: 6px;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .icon-link svg {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
 }
 
 .icon-link:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.1);
+  color: var(--accent);
 }
 
 .icon-link:focus-visible {

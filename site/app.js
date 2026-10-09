@@ -68,9 +68,12 @@ function fillIndustries(companies) {
   }
 }
 
-function link(label, href) {
+function iconLink(label, icon, href) {
   const anchor = document.createElement('a');
-  anchor.textContent = label;
+  anchor.className = 'icon-link';
+  anchor.append(document.getElementById(`icon-${icon}`).content.firstElementChild.cloneNode(true));
+  anchor.setAttribute('aria-label', label);
+  anchor.title = label;
   anchor.href = href;
   anchor.target = '_blank';
   anchor.rel = 'noopener';
@@ -99,8 +102,8 @@ function renderCard(company) {
   }
 
   const links = card.querySelector('.links');
-  if (isSafeUrl(company.linkedin)) links.append(link('LinkedIn', company.linkedin));
-  if (company.glassdoor && isSafeUrl(company.glassdoor)) links.append(link('Glassdoor', company.glassdoor));
+  if (isSafeUrl(company.linkedin)) links.append(iconLink(`${company.name} on LinkedIn`, 'linkedin', company.linkedin));
+  if (company.glassdoor && isSafeUrl(company.glassdoor)) links.append(iconLink(`${company.name} on Glassdoor`, 'glassdoor', company.glassdoor));
 
   const verified = card.querySelector('.verified');
   verified.dateTime = company.last_verified;

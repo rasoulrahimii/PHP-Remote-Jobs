@@ -244,14 +244,6 @@
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Printify-EI_IE3094843.11,19.htm
   last_verified: 2025-02-23
 
-- name: Proxify
-  url: https://career.proxify.io/
-  industries:
-    - Technology
-  linkedin: https://www.linkedin.com/showcase/proxify-developers/
-  glassdoor: https://www.glassdoor.com/Overview/Working-at-Proxify-EI_IE4090194.11,18.htm
-  last_verified: 2025-02-23
-
 - name: RapidSeedbox Ltd
   url: https://www.rapidseedbox.com/jobs
   industries:

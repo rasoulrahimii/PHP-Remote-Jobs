@@ -1,0 +1,57 @@
+name: Check links
+
+on:
+  pull_request:
+    paths:
+      - companies.yml
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  pull-request:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Collect lines added to companies.yml
+        id: added
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          git diff --unified=0 "$BASE_SHA" HEAD -- companies.yml | grep '^+[^+]' > added-lines.txt || true
+          if [ -s added-lines.txt ]; then echo "found=true" >> "$GITHUB_OUTPUT"; fi
+      - name: Check added links
+        if: steps.added.outputs.found == 'true'
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --no-progress added-lines.txt
+          failIfEmpty: false
+
+  scheduled:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check all links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config lychee.toml --no-progress companies.yml README.md
+          output: lychee-report.md
+          fail: false
+      - name: Open, update or close the broken links issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXIT_CODE: ${{ steps.lychee.outputs.exit_code }}
+        run: |
+          report=/dev/null
+          if [ "$EXIT_CODE" != "0" ]; then report=lychee-report.md; fi
+          scripts/report-issue.sh broken-links "Broken links in the companies list" "$report"

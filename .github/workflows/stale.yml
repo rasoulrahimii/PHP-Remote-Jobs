@@ -1,0 +1,27 @@
+name: Stale entries
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+      - run: composer install --no-interaction --no-progress --prefer-dist
+      - run: php scripts/companies.php stale --months=6 > stale-report.md
+      - name: Open, update or close the stale entries issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: scripts/report-issue.sh stale-entries "Entries due for re-verification" stale-report.md

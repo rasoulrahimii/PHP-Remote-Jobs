@@ -157,6 +157,7 @@
 
 - name: Interaction Design Foundation
   url: https://www.interaction-design.org/about/careers
+  status: no-active-openings
   industries:
     - Education
     - UX/UI Design
@@ -167,10 +168,10 @@
     - Marathon stipend
   linkedin: https://www.linkedin.com/company/ixdf-interaction-design-foundation-school/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Interaction-Design-Foundation-EI_IE1147112.11,40.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Kirschbaum
-  url: https://kirschbaumdevelopment.com/work
+  url: https://kirschbaumdevelopment.com/careers
   status: hiring
   industries:
     - Software Solutions
@@ -256,7 +257,7 @@
   last_verified: 2026-10-10
 
 - name: Printify
-  url: https://jobs.printify.com/jobs/
+  url: https://careers.fyul.com/jobs
   status: hiring
   industries:
     - Print on Demand

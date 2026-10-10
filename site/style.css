@@ -12,6 +12,7 @@
   --stale: #a14d00;
   --stale-bg: #fff1e0;
   --fresh: #1d7a46;
+  --fresh-bg: #e3f5ea;
   --radius: 12px;
   --knob: #ffffff;
   --knob-shadow: 0 2px 6px rgba(29, 29, 43, 0.25);
@@ -33,6 +34,7 @@
     --stale: #ffb870;
     --stale-bg: #3a2914;
     --fresh: #6fd39b;
+    --fresh-bg: #16301f;
     --knob: #e9e7ff;
     --knob-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     color-scheme: dark;
@@ -53,6 +55,7 @@
   --stale: #ffb870;
   --stale-bg: #3a2914;
   --fresh: #6fd39b;
+  --fresh-bg: #16301f;
   --knob: #e9e7ff;
   --knob-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   color-scheme: dark;
@@ -320,7 +323,14 @@ a {
   white-space: nowrap;
 }
 
-.card.no-openings .name a {
+.status.hiring {
+  border: 1px solid transparent;
+  background: var(--fresh-bg);
+  color: var(--fresh);
+  font-weight: 600;
+}
+
+.card.no-active-openings .name a {
   color: var(--muted);
 }
 

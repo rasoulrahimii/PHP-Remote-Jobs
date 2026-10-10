@@ -22,6 +22,7 @@
 
 - name: Automattic
   url: https://automattic.com/work-with-us/
+  status: hiring
   industries:
     - Web
   benefits:
@@ -92,41 +93,46 @@
 
 - name: Coaching.com
   url: https://www.coaching.com/
+  status: no-active-openings
   industries:
     - Online Coaching Platform
   linkedin: https://www.linkedin.com/company/coachingdotcom/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Coaching-com-EI_IE5399613.11,23.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: CobbleWeb
   url: https://www.cobbleweb.co.uk/recruitment/#job_list
+  status: hiring
   industries:
     - Software
   linkedin: https://www.linkedin.com/company/cobbleweb/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-CobbleWeb-EI_IE3292066.11,20.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Cody AI
   url: https://meetcody.ai/
+  status: no-active-openings
   industries:
     - Enterprise AI Solutions
   benefits:
     - 100k-140k USD per year for Senior Laravel Developer
   linkedin: https://www.linkedin.com/company/meetcodyai/jobs/
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Fandom
   url: https://about.fandom.com/careers
+  status: no-active-openings
   industries:
     - Entertainment
   benefits:
     - Flexible working hours and time off, Paid Parental Leave, Training (unlimited Udemy + more), Comprehensive Medical, Dental, Vision
   linkedin: https://www.linkedin.com/company/fandomwikia/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Fandom-EI_IE428648.11,17.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Hospitable
   url: https://apply.workable.com/hospitable/
+  status: hiring
   industries:
     - Software
     - Service
@@ -140,6 +146,7 @@
 
 - name: Hostaway
   url: https://hostaway.recruitee.com/
+  status: hiring
   industries:
     - Vacation Rental Software
   benefits:
@@ -164,16 +171,18 @@
 
 - name: Kirschbaum
   url: https://kirschbaumdevelopment.com/work
+  status: hiring
   industries:
     - Software Solutions
   benefits:
     - Company computer, Paid vacation, Budget for books/conferences, Paid holidays, Health, dental & vision insurance, Paid open-source time, Maternity / paternity leave
   linkedin: https://www.linkedin.com/company/kirschbaumdevelopment/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Kirschbaum-EI_IE8311634.11,21.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Lokalise
   url: https://lokalise.com/careers
+  status: no-active-openings
   industries:
     - Technology
     - AI
@@ -185,10 +194,11 @@
     - Stock options
   linkedin: https://www.linkedin.com/company/lokalise/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Lokalise-EI_IE3398432.11,19.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: MailerLite
   url: https://www.mailerlite.com/jobs
+  status: hiring
   industries:
     - Email Automations
   benefits:
@@ -199,6 +209,7 @@
 
 - name: Matomo
   url: https://matomo.org/jobs/
+  status: no-active-openings
   industries:
     - Technology
     - Analytics
@@ -207,10 +218,11 @@
     - Paid certifications & training as applicable
   linkedin: https://www.linkedin.com/company/matomo/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Matomo-EI_IE9336278.11,17.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Modus Create
   url: https://moduscreate.com/careers/
+  status: no-active-openings
   industries:
     - Consulting
     - Digital
@@ -219,18 +231,20 @@
     - Employee Referral Program
   linkedin: https://www.linkedin.com/company/modus-create/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Modus-Create-EI_IE718505.11,23.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Nagarro
   url: https://www.nagarro.com/en/careers
+  status: no-active-openings
   industries:
     - Technology
   linkedin: https://www.linkedin.com/company/nagarro/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Nagarro-EI_IE240077.11,18.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Nordhealth
   url: https://nordhealth.com/careers/
+  status: no-active-openings
   industries:
     - Digital Healthcare
   benefits:
@@ -239,20 +253,22 @@
     - Latest hardware and software
   linkedin: https://www.linkedin.com/company/nordhealth/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Nordhealth-EI_IE6350968.11,21.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Printify
   url: https://jobs.printify.com/jobs/
+  status: hiring
   industries:
     - Print on Demand
   benefits:
     - Relocation Support, Health insurance
   linkedin: https://www.linkedin.com/company/printify/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Printify-EI_IE3094843.11,19.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: RapidSeedbox Ltd
   url: https://www.rapidseedbox.com/jobs
+  status: hiring
   industries:
     - Software
   benefits:
@@ -261,28 +277,31 @@
     - Company retreats
   linkedin: https://www.rapidseedbox.com/jobs
   glassdoor: https://www.glassdoor.com/Overview/Working-at-RapidSeedbox-EI_IE1446416.11,23.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: RebelCode
   url: https://rebelcode.com/careers/
+  status: no-active-openings
   industries:
     - Digital
   benefits:
     - Conferences
     - Team meet-ups and retreats
   linkedin: https://www.linkedin.com/company/rebelcode/jobs/
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: SecureIT Swiss
   url: https://jobs.secureit.ch/
+  status: hiring
   industries:
     - IT Security
     - SaaS
   linkedin: https://www.linkedin.com/company/secureit-swiss-ag/jobs/
-  last_verified: 2026-09-26
+  last_verified: 2026-10-10
 
 - name: SEO Sherpa
   url: https://seosherpa.com/careers/
+  status: no-active-openings
   industries:
     - SEO
     - Digital
@@ -294,15 +313,16 @@
     - Investment in gear
   linkedin: https://www.linkedin.com/company/seo-sherpa/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-SEO-Sherpa-EI_IE4640375.11,21.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Sportserve
   url: https://careers.sportserve.co/
+  status: no-active-openings
   industries:
     - Sports Betting
   linkedin: https://www.linkedin.com/company/asianlogic-ltd.---bayview-technologies/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Sportserve-EI_IE9173106.11,21.htm
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Springloaded
   url: https://springloaded.co/jobs
@@ -314,6 +334,7 @@
 
 - name: Tighten
   url: https://tighten.com/careers/
+  status: no-active-openings
   industries:
     - Software
   benefits:
@@ -321,7 +342,7 @@
     - Bi-annual Onsites
     - Workspace Allowance
   linkedin: https://www.linkedin.com/company/tightenco/jobs/
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10
 
 - name: Tixel
   url: https://tixel.com/
@@ -343,7 +364,8 @@
 
 - name: UserScape
   url: https://userscape.com/
+  status: no-active-openings
   industries:
     - Laravel / Open Source Software
   linkedin: https://www.linkedin.com/company/userscape/jobs/
-  last_verified: 2025-02-23
+  last_verified: 2026-10-10

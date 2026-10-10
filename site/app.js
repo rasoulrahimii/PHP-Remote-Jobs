@@ -1,6 +1,8 @@
 const STALE_MONTHS = 6;
 const DEFAULT_SORT = 'newest';
 const NO_OPENINGS = 'no-active-openings';
+const HIRING = 'hiring';
+const STATUS_BADGES = { [HIRING]: 'Hiring', [NO_OPENINGS]: 'No active openings' };
 
 const form = document.getElementById('filters');
 const results = document.getElementById('results');
@@ -18,7 +20,7 @@ const staleCutoff = (() => {
 const isSafeUrl = (url) => /^https?:\/\//i.test(url);
 
 const searchText = (company) =>
-  [company.name, ...company.industries, ...company.benefits, company.status === NO_OPENINGS ? 'no active openings' : '']
+  [company.name, ...company.industries, ...company.benefits, STATUS_BADGES[company.status] || '']
     .join(' ')
     .toLowerCase();
 
@@ -36,6 +38,7 @@ function readState() {
     sort: data.get('sort') || DEFAULT_SORT,
     benefits: data.has('benefits'),
     recent: data.has('recent'),
+    hiring: data.has('hiring'),
     open: data.has('open'),
   };
 }
@@ -47,6 +50,7 @@ function writeState(state) {
   if (state.sort !== DEFAULT_SORT) params.set('sort', state.sort);
   if (state.benefits) params.set('benefits', '1');
   if (state.recent) params.set('recent', '1');
+  if (state.hiring) params.set('hiring', '1');
   if (state.open) params.set('open', '1');
   const query = params.toString();
   history.replaceState(null, '', query ? `?${query}` : location.pathname);
@@ -59,6 +63,7 @@ function restoreState() {
   form.sort.value = sorters[params.get('sort')] ? params.get('sort') : DEFAULT_SORT;
   form.benefits.checked = params.get('benefits') === '1';
   form.recent.checked = params.get('recent') === '1';
+  form.hiring.checked = params.get('hiring') === '1';
   form.open.checked = params.get('open') === '1';
 }
 
@@ -94,9 +99,13 @@ function renderCard(company) {
   name.textContent = company.name;
   if (isSafeUrl(company.url)) name.href = company.url;
 
-  if (company.status === NO_OPENINGS) {
-    card.classList.add('no-openings');
-    card.querySelector('.status').hidden = false;
+  const badge = STATUS_BADGES[company.status];
+  if (badge) {
+    const status = card.querySelector('.status');
+    status.textContent = badge;
+    status.classList.add(company.status);
+    status.hidden = false;
+    card.classList.add(company.status);
   }
 
   const chips = card.querySelector('.chips');
@@ -137,6 +146,7 @@ function render(companies) {
     .filter((company) => !state.industry || company.industries.includes(state.industry))
     .filter((company) => !state.benefits || company.benefits.length > 0)
     .filter((company) => !state.recent || company.last_verified >= staleCutoff)
+    .filter((company) => !state.hiring || company.status === HIRING)
     .filter((company) => !state.open || company.status !== NO_OPENINGS)
     .filter((company) => terms.every((term) => company.search.includes(term)))
     .sort(sorters[state.sort]);

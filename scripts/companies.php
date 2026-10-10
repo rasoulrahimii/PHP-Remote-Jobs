@@ -12,8 +12,8 @@ const README_FILE = __DIR__ . '/../README.md';
 const TABLE_START = '<!-- companies:start -->';
 const TABLE_END = '<!-- companies:end -->';
 const FIELDS = ['name', 'url', 'status', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
-const STATUSES = ['active', 'no-active-openings'];
-const STATUS_LABELS = ['no-active-openings' => 'no active openings'];
+const STATUSES = ['active', 'hiring', 'no-active-openings'];
+const STATUS_SUFFIXES = ['hiring' => ' **(hiring)**', 'no-active-openings' => ' _(no active openings)_'];
 const TABLE_HEADER = ['Company', 'Industry', 'Benefits', 'LinkedIn', 'Glassdoor', 'Last verified'];
 const DEFAULT_STALE_MONTHS = 6;
 
@@ -248,7 +248,7 @@ function renderTable(array $companies): string
     foreach ($companies as $company) {
         $rows[] = array_map(escapeCell(...), [
             sprintf('[%s](%s)', $company['name'], $company['url'])
-                . (isset(STATUS_LABELS[$company['status']]) ? sprintf(' _(%s)_', STATUS_LABELS[$company['status']]) : ''),
+                . (STATUS_SUFFIXES[$company['status']] ?? ''),
             implode(', ', $company['industries']),
             $company['benefits'] === [] ? '-' : implode('; ', $company['benefits']),
             sprintf('[LinkedIn](%s)', $company['linkedin']),

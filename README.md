@@ -54,4 +54,4 @@ Check the [rules for adding a company](CONTRIBUTING.md#inclusion-criteria), then
 
 ---
 
-If this list helped you, please [give it a star](https://github.com/rasoulrahimii/PHP-Remote-Jobs). MIT License.
+If this list helped you, please [give it a star](https://github.com/rasoulrahimii/PHP-Remote-Jobs).

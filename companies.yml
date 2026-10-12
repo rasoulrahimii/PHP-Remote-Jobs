@@ -119,6 +119,18 @@
   linkedin: https://www.linkedin.com/company/meetcodyai/jobs/
   last_verified: 2026-10-10
 
+- name: CRAE Group
+  url: https://craegroup.com/careers
+  status: hiring
+  location: EU
+  industries:
+    - iGaming
+  benefits:
+    - Paid annual leave
+    - Performance bonus package
+  linkedin: https://www.linkedin.com/company/craegroup/jobs/
+  last_verified: 2026-10-12
+
 - name: Fandom
   url: https://about.fandom.com/careers
   status: no-active-openings

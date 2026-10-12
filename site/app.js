@@ -20,7 +20,7 @@ const staleCutoff = (() => {
 const isSafeUrl = (url) => /^https?:\/\//i.test(url);
 
 const searchText = (company) =>
-  [company.name, ...company.industries, ...company.benefits, STATUS_BADGES[company.status] || '']
+  [company.name, company.location || '', ...company.industries, ...company.benefits, STATUS_BADGES[company.status] || '']
     .join(' ')
     .toLowerCase();
 
@@ -106,6 +106,12 @@ function renderCard(company) {
     status.classList.add(company.status);
     status.hidden = false;
     card.classList.add(company.status);
+  }
+
+  if (company.location) {
+    const location = card.querySelector('.location');
+    location.textContent = `Remote: ${company.location}`;
+    location.hidden = false;
   }
 
   const chips = card.querySelector('.chips');

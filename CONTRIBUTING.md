@@ -7,8 +7,8 @@ Thanks for helping keep this list useful. "Curated" only means something if ever
 A company can be added when all of these are true:
 
 1. **It is the direct employer.** The company hires and pays its developers itself. Recruiting agencies, staffing firms and talent marketplaces do not qualify.
-2. **It posted a remote PHP role within the last 12 months.** Link the job post (or an archived copy, for example on the Wayback Machine) as evidence in your issue or pull request.
-3. **The role is remote.** Fully remote, or remote within a broad region such as "Remote, EU", counts. Hybrid or office based roles do not.
+2. **It posted a remote PHP role within the last 12 months.** Roles that require Laravel, Symfony or another PHP framework count as PHP roles. Link the job post (or an archived copy, for example on the Wayback Machine) as evidence in your issue or pull request.
+3. **The role is remote.** Fully remote, or remote within a region such as "Remote, EU", counts. Record the region in `location`. Remote with occasional in-person meetings also counts. Hybrid or office based roles do not.
 4. **It has a working careers page.** The `url` should point to where open positions are listed, not just the homepage, whenever such a page exists.
 
 ## Suggest a company without writing code
@@ -24,6 +24,7 @@ All company data lives in [`companies.yml`](companies.yml). The table in the REA
    ```yaml
    - name: Example Co
      url: https://example.com/careers/
+     location: EU
      industries:
        - SaaS
        - E-commerce
@@ -51,6 +52,7 @@ All company data lives in [`companies.yml`](companies.yml). The table in the REA
 | `name`          | Yes      | Company name as the company writes it.                                           |
 | `url`           | Yes      | Careers or jobs page.                                                            |
 | `status`        | No       | `hiring` when a remote PHP role is open right now, `no-active-openings` when nothing PHP related is open. Leave it out if you have not checked. |
+| `location`      | No       | Where the remote role is open, when it is limited to a region, for example `USA`, `EU` or `Worldwide except USA`. Use countries or regions, not cities. Leave it out when the company hires remotely from anywhere. |
 | `industries`    | Yes      | One or more industries, as a list.                                               |
 | `benefits`      | No       | Notable benefits, one per list item. Leave the field out if you do not know any. |
 | `linkedin`      | Yes      | The company's LinkedIn jobs page.                                                |

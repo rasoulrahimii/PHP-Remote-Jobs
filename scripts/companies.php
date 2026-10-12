@@ -11,10 +11,10 @@ const DATA_FILE = __DIR__ . '/../companies.yml';
 const README_FILE = __DIR__ . '/../README.md';
 const TABLE_START = '<!-- companies:start -->';
 const TABLE_END = '<!-- companies:end -->';
-const FIELDS = ['name', 'url', 'status', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
+const FIELDS = ['name', 'url', 'status', 'location', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
 const STATUSES = ['active', 'hiring', 'no-active-openings'];
 const STATUS_SUFFIXES = ['hiring' => ' **(hiring)**', 'no-active-openings' => ' _(no active openings)_'];
-const TABLE_HEADER = ['Company', 'Industry', 'Benefits', 'LinkedIn', 'Glassdoor', 'Last verified'];
+const TABLE_HEADER = ['Company', 'Remote location', 'Industry', 'Benefits', 'LinkedIn', 'Glassdoor', 'Last verified'];
 const DEFAULT_STALE_MONTHS = 6;
 
 date_default_timezone_set('UTC');
@@ -31,7 +31,7 @@ final class InvalidData extends RuntimeException
 }
 
 /**
- * @return list<array{name: string, url: string, status: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}>
+ * @return list<array{name: string, url: string, status: string, location: ?string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}>
  */
 function loadCompanies(): array
 {
@@ -71,7 +71,7 @@ function loadCompanies(): array
 
 /**
  * @param list<string> $errors
- * @return ?array{name: string, url: string, status: string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}
+ * @return ?array{name: string, url: string, status: string, location: ?string, industries: list<string>, benefits: list<string>, linkedin: string, glassdoor: ?string, last_verified: string}
  */
 function normalizeCompany(mixed $entry, string $label, array &$errors): ?array
 {
@@ -91,6 +91,7 @@ function normalizeCompany(mixed $entry, string $label, array &$errors): ?array
         'name' => text($entry, 'name', $label, $errors),
         'url' => url($entry, 'url', $label, $errors, true),
         'status' => status($entry, $label, $errors),
+        'location' => isset($entry['location']) ? text($entry, 'location', $label, $errors) : null,
         'industries' => textList($entry, 'industries', $label, $errors, true),
         'benefits' => textList($entry, 'benefits', $label, $errors, false),
         'linkedin' => url($entry, 'linkedin', $label, $errors, true),
@@ -249,6 +250,7 @@ function renderTable(array $companies): string
         $rows[] = array_map(escapeCell(...), [
             sprintf('[%s](%s)', $company['name'], $company['url'])
                 . (STATUS_SUFFIXES[$company['status']] ?? ''),
+            $company['location'] ?? '-',
             implode(', ', $company['industries']),
             $company['benefits'] === [] ? '-' : implode('; ', $company['benefits']),
             sprintf('[LinkedIn](%s)', $company['linkedin']),

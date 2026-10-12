@@ -157,6 +157,19 @@
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Givebutter-EI_IE4414509.11,21.htm
   last_verified: 2026-10-12
 
+- name: GradGuard
+  url: https://gradguard.com/careers
+  status: hiring
+  location: USA
+  industries:
+    - Insurance
+  benefits:
+    - Unlimited PTO
+    - Parental leave
+    - 401k match up to 5%
+  linkedin: https://www.linkedin.com/company/gradguard/jobs/
+  last_verified: 2026-10-12
+
 - name: Hospitable
   url: https://apply.workable.com/hospitable/
   status: hiring

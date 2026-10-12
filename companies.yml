@@ -196,6 +196,19 @@
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Kirschbaum-EI_IE8311634.11,21.htm
   last_verified: 2026-10-10
 
+- name: LabelWorx
+  url: https://labelworx.com/
+  status: no-active-openings
+  location: UK
+  industries:
+    - Music
+  benefits:
+    - Annual professional development budget
+    - Birthday off
+    - Extra annual leave with length of service
+  linkedin: https://www.linkedin.com/company/label-worx-ltd/jobs/
+  last_verified: 2026-10-12
+
 - name: Lokalise
   url: https://lokalise.com/careers
   status: no-active-openings

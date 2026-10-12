@@ -131,6 +131,15 @@
   linkedin: https://www.linkedin.com/company/craegroup/jobs/
   last_verified: 2026-10-12
 
+- name: Evolution Collect
+  url: https://evolutioncollect.com/
+  status: hiring
+  location: USA
+  industries:
+    - Fintech
+  linkedin: https://www.linkedin.com/company/evolution-collect/jobs/
+  last_verified: 2026-10-12
+
 - name: Fandom
   url: https://about.fandom.com/careers
   status: no-active-openings

@@ -518,3 +518,13 @@
     - Co-working office access in Lisbon
   linkedin: https://www.linkedin.com/company/uniplaces/jobs/
   last_verified: 2026-10-12
+
+- name: Steward
+  url: https://steward1.homerun.co/
+  status: no-active-openings
+  location: US Pacific Time overlap
+  industries:
+    - Fintech
+    - Agriculture
+  linkedin: https://www.linkedin.com/company/go-steward/jobs/
+  last_verified: 2026-10-12

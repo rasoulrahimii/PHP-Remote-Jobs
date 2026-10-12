@@ -406,6 +406,18 @@
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Tixel-EI_IE7186147.11,16.htm
   last_verified: 2026-10-10
 
+- name: Track it Forward
+  url: https://www.trackitforward.com/
+  status: hiring
+  location: USA, Canada
+  industries:
+    - Nonprofit
+    - SaaS
+  benefits:
+    - Annual team retreats
+  linkedin: https://www.linkedin.com/company/track-it-forward/jobs/
+  last_verified: 2026-10-12
+
 - name: Trustfactory
   url: https://trustfactory.de/karriere/
   status: no-active-openings

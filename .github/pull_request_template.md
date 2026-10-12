@@ -11,7 +11,7 @@ Please read [CONTRIBUTING.md](https://github.com/rasoulrahimii/PHP-Remote-Jobs/b
 
 ## Checklist
 
-- [ ] I edited `companies.yml` only and did not touch the README table.
+- [ ] I edited `companies.yml` only.
 - [ ] The company is the direct employer, not a recruiting agency or talent marketplace.
 - [ ] It posted a remote PHP role within the last 12 months, linked above.
 - [ ] `last_verified` is the date I checked the criteria.

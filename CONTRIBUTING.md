@@ -17,7 +17,7 @@ Open a [Suggest a company](https://github.com/rasoulrahimii/PHP-Remote-Jobs/issu
 
 ## Add a company with a pull request
 
-All company data lives in [`companies.yml`](companies.yml). The table in the README and the website are generated from it, so **do not edit the README table by hand**. It is regenerated automatically after your pull request is merged.
+All company data lives in [`companies.yml`](companies.yml). The website is generated from it after your pull request is merged.
 
 1. Add an entry anywhere in `companies.yml`. Order does not matter: the output is sorted automatically.
 
@@ -79,7 +79,6 @@ The link check skips LinkedIn, Glassdoor, FlexJobs and Remote.co because they bl
 |--------------------|--------------------------------------------|-----------------------------------------------------------------|
 | Validate companies | Every pull request                         | Runs `php scripts/companies.php validate`.                      |
 | Check links        | Pull requests that change `companies.yml`  | Checks only the links added in the pull request.                |
-| Regenerate README  | Pushes to `main` that change the data      | Rebuilds the README table and commits it.                       |
 | Deploy site        | Pushes to `main` that change data or site  | Publishes the GitHub Pages site.                                |
 | Check links        | Every Monday                               | Checks every link and keeps the `broken-links` issue up to date. |
 | Stale entries      | Every Monday                               | Keeps the `stale-entries` issue up to date.                     |

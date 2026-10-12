@@ -8,13 +8,8 @@ use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
 const DATA_FILE = __DIR__ . '/../companies.yml';
-const README_FILE = __DIR__ . '/../README.md';
-const TABLE_START = '<!-- companies:start -->';
-const TABLE_END = '<!-- companies:end -->';
 const FIELDS = ['name', 'url', 'status', 'location', 'industries', 'benefits', 'linkedin', 'glassdoor', 'last_verified'];
 const STATUSES = ['active', 'hiring', 'no-active-openings'];
-const STATUS_SUFFIXES = ['hiring' => ' **(hiring)**', 'no-active-openings' => ' _(no active openings)_'];
-const TABLE_HEADER = ['Company', 'Remote location', 'Industry', 'Benefits', 'LinkedIn', 'Glassdoor', 'Last verified'];
 const DEFAULT_STALE_MONTHS = 6;
 
 date_default_timezone_set('UTC');
@@ -240,85 +235,9 @@ function findDuplicates(array $companies): array
     return $errors;
 }
 
-/**
- * @param list<array<string, mixed>> $companies
- */
-function renderTable(array $companies): string
-{
-    $rows = [TABLE_HEADER];
-    foreach ($companies as $company) {
-        $rows[] = array_map(escapeCell(...), [
-            sprintf('[%s](%s)', $company['name'], $company['url'])
-                . (STATUS_SUFFIXES[$company['status']] ?? ''),
-            $company['location'] ?? '-',
-            implode(', ', $company['industries']),
-            $company['benefits'] === [] ? '-' : implode('; ', $company['benefits']),
-            sprintf('[LinkedIn](%s)', $company['linkedin']),
-            $company['glassdoor'] === null ? '-' : sprintf('[Glassdoor](%s)', $company['glassdoor']),
-            $company['last_verified'],
-        ]);
-    }
-
-    $widths = array_map(
-        static fn (int $column): int => max(array_map(static fn (array $row): int => mb_strlen($row[$column]), $rows)),
-        array_keys(TABLE_HEADER),
-    );
-
-    $formatRow = static fn (array $row): string => '| ' . implode(' | ', array_map(
-        static fn (string $cell, int $width): string => $cell . str_repeat(' ', $width - mb_strlen($cell)),
-        $row,
-        $widths,
-    )) . ' |';
-
-    $separator = '|' . implode('|', array_map(static fn (int $width): string => str_repeat('-', $width + 2), $widths)) . '|';
-
-    $lines = array_map($formatRow, $rows);
-    array_splice($lines, 1, 0, [$separator]);
-
-    return implode("\n", $lines);
-}
-
-function escapeCell(string $cell): string
-{
-    return str_replace('|', '\|', $cell);
-}
-
 function validateCommand(): int
 {
     printf("companies.yml is valid (%d companies).\n", count(loadCompanies()));
-
-    return 0;
-}
-
-function readmeCommand(bool $check): int
-{
-    $readme = (string) file_get_contents(README_FILE);
-    $start = strpos($readme, TABLE_START);
-    $end = strpos($readme, TABLE_END);
-    if ($start === false || $end === false || $end < $start) {
-        fwrite(STDERR, sprintf("README.md must contain %s and %s around the companies table.\n", TABLE_START, TABLE_END));
-
-        return 1;
-    }
-
-    $updated = substr($readme, 0, $start + strlen(TABLE_START))
-        . "\n" . renderTable(loadCompanies()) . "\n"
-        . substr($readme, $end);
-
-    if ($updated === $readme) {
-        echo "README.md is up to date.\n";
-
-        return 0;
-    }
-
-    if ($check) {
-        fwrite(STDERR, "README.md is out of date. Run: php scripts/companies.php readme\n");
-
-        return 1;
-    }
-
-    file_put_contents(README_FILE, $updated);
-    echo "README.md updated.\n";
 
     return 0;
 }
@@ -383,7 +302,6 @@ function usage(int $exitCode): int
 
         Commands:
           validate           Check companies.yml for errors
-          readme [--check]   Regenerate the README table (--check only reports if it is out of date)
           json <path>        Export the companies as JSON
           stale [--months=N] Print entries not verified in the last N months (default 6)
 
@@ -402,7 +320,6 @@ function main(array $argv): int
     try {
         return match ($argv[1] ?? null) {
             'validate' => validateCommand(),
-            'readme' => readmeCommand($arguments === ['--check']),
             'json' => jsonCommand($arguments[0] ?? null),
             'stale' => staleCommand($arguments),
             'help', '--help', '-h' => usage(0),

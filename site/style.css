@@ -129,6 +129,27 @@ a {
   color: var(--accent-text);
 }
 
+.button.star {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.button.star svg {
+  width: 16px;
+  height: 16px;
+  color: #e3a008;
+  transition: transform 0.3s ease;
+}
+
+.button.star:hover {
+  border-color: var(--border-strong);
+}
+
+.button.star:hover svg {
+  transform: rotate(72deg) scale(1.15);
+}
+
 .theme-toggle {
   position: absolute;
   top: -24px;

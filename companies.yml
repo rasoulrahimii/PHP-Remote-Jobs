@@ -160,6 +160,7 @@
 - name: Hospitable
   url: https://apply.workable.com/hospitable/
   status: hiring
+  location: European or US East Coast time zones
   industries:
     - Software
     - Service
@@ -169,7 +170,7 @@
     - Mental health and emotional support
   linkedin: https://www.linkedin.com/company/hospitable/jobs/
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Hospitable-EI_IE2148011.11,21.htm
-  last_verified: 2026-10-10
+  last_verified: 2026-10-12
 
 - name: Hostaway
   url: https://hostaway.recruitee.com/

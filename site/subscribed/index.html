@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subscription confirmed · Remote PHP Jobs</title>
+  <meta name="description" content="Your subscription to Remote PHP Jobs updates is confirmed.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#5b5bd6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b5bd6'/%3E%3Ctext x='16' y='21' font-family='system-ui,sans-serif' font-size='11' font-weight='700' fill='%23fff' text-anchor='middle'%3EPHP%3C/text%3E%3C/svg%3E">
+  <script>
+    try {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme;
+    } catch (error) {}
+  </script>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="wrap confirm">
+    <section class="confirm-card">
+      <span class="confirm-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12.5l4.5 4.5L19 7.5"/>
+        </svg>
+      </span>
+      <h1>Subscription confirmed</h1>
+      <p>You're on the list. We'll email you when companies start hiring remote PHP developers.</p>
+      <nav class="actions">
+        <a class="button primary" href="../">Browse the list</a>
+        <a class="button" href="../?hiring=1">See who is hiring now</a>
+      </nav>
+    </section>
+
+    <section class="confirm-card secondary">
+      <h2>Know a company that hires remote PHP developers?</h2>
+      <p>Help other developers find it. Suggest it in a GitHub issue, no code needed.</p>
+      <nav class="actions">
+        <a class="button" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs/issues/new?template=suggest-company.yml">Suggest a company</a>
+        <a class="button star" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/>
+          </svg>
+          Star on GitHub
+        </a>
+      </nav>
+    </section>
+  </main>
+</body>
+</html>

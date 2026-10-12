@@ -679,6 +679,61 @@ a {
   border: 0;
 }
 
+.confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 640px;
+  min-height: 100vh;
+  justify-content: center;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.confirm-card {
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.confirm-card h1 {
+  margin: 16px 0 8px;
+  font-size: clamp(1.6rem, 4vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.confirm-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.confirm-card p {
+  margin: 0 0 20px;
+  color: var(--muted);
+}
+
+.confirm-card.secondary {
+  padding: 24px 32px;
+  background: transparent;
+}
+
+.confirm-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--fresh-bg);
+  color: var(--fresh);
+}
+
+.confirm-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
 .footer {
   padding-bottom: 48px;
   color: var(--muted);
@@ -718,6 +773,11 @@ a {
 
   .newsletter {
     padding: 20px;
+  }
+
+  .confirm-card,
+  .confirm-card.secondary {
+    padding: 24px 20px;
   }
 
   .newsletter-fields {

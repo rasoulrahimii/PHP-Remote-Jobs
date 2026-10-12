@@ -18,6 +18,7 @@
   </script>
   <link rel="stylesheet" href="style.css">
   <script src="app.js" defer></script>
+  <script src="https://f.convertkit.com/ckjs/ck.5.js" defer></script>
 </head>
 <body>
   <header class="masthead">
@@ -39,6 +40,7 @@
       <p class="lede">Companies that have hired remote PHP developers, with links to their careers pages. Each entry shows when it was last checked by hand.</p>
       <nav class="actions">
         <a class="button primary" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs/issues/new?template=suggest-company.yml">Suggest a company</a>
+        <a class="button" href="#newsletter">Email updates</a>
         <a class="button star" href="https://github.com/rasoulrahimii/PHP-Remote-Jobs" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 2.5l2.94 5.96 6.56.95-4.75 4.63 1.12 6.54L12 17.5l-5.87 3.08 1.12-6.54L2.5 9.41l6.56-.95z"/>
@@ -90,6 +92,21 @@
       <button type="button" class="clear" id="clear" hidden>Clear filters</button>
     </div>
     <ul class="grid" id="results"></ul>
+
+    <section class="newsletter" id="newsletter" aria-labelledby="newsletter-title">
+      <div class="newsletter-text">
+        <h2 id="newsletter-title">Get new companies by email</h2>
+        <p>Hear about companies that start hiring remote PHP developers. No spam, unsubscribe at any time.</p>
+      </div>
+      <form action="https://app.kit.com/forms/10037248/subscriptions" class="seva-form formkit-form newsletter-form" method="post" data-sv-form="10037248" data-uid="8c36724967" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Thanks! Check your inbox to confirm your subscription.","redirect_url":""},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""}},"version":"5"}'>
+        <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+        <div class="formkit-fields newsletter-fields" data-element="fields">
+          <label class="visually-hidden" for="newsletter-email">Email address</label>
+          <input class="formkit-input" id="newsletter-email" name="email_address" type="email" placeholder="you@example.com" autocomplete="email" required>
+          <button class="formkit-submit" type="submit" data-element="submit">Subscribe</button>
+        </div>
+      </form>
+    </section>
   </main>
 
   <footer class="wrap footer">

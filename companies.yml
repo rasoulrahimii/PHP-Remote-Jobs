@@ -130,6 +130,21 @@
   glassdoor: https://www.glassdoor.com/Overview/Working-at-Fandom-EI_IE428648.11,17.htm
   last_verified: 2026-10-10
 
+- name: Givebutter
+  url: https://givebutter.com/careers
+  status: hiring
+  location: USA
+  industries:
+    - Fundraising
+    - SaaS
+  benefits:
+    - Flexible PTO
+    - 12 weeks paid parental leave
+    - Home office stipend
+  linkedin: https://www.linkedin.com/company/givebutter/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-Givebutter-EI_IE4414509.11,21.htm
+  last_verified: 2026-10-12
+
 - name: Hospitable
   url: https://apply.workable.com/hospitable/
   status: hiring

@@ -530,3 +530,69 @@
     - Agriculture
   linkedin: https://www.linkedin.com/company/go-steward/jobs/
   last_verified: 2026-10-17
+
+- name: GiveDirectly
+  url: https://job-boards.greenhouse.io/givedirectly
+  status: hiring
+  location: USA, UK, Kenya
+  industries:
+    - Nonprofit
+  benefits:
+    - Benefits stipend
+  linkedin: https://www.linkedin.com/company/givedirectly/jobs/
+  last_verified: 2026-10-17
+
+- name: CoinsPaid
+  url: https://jobs.eu.lever.co/coinspaid
+  status: hiring
+  location: Europe
+  industries:
+    - Crypto Payments
+  benefits:
+    - Flexible budget for sports, mental health, coworking or home office
+  linkedin: https://www.linkedin.com/company/coinspaid-com/jobs/
+  last_verified: 2026-10-17
+
+- name: Infomediji
+  url: https://infomedijidoo.recruitee.com/
+  status: hiring
+  industries:
+    - Spatial Interactive Media
+  linkedin: https://www.linkedin.com/company/infomediji/jobs/
+  last_verified: 2026-10-17
+
+- name: CyberArrow
+  url: https://jobs.cyberarrow.io/
+  status: hiring
+  location: Portugal, Romania, Nepal
+  industries:
+    - Cybersecurity
+    - Compliance
+  linkedin: https://www.linkedin.com/company/cyberarrow/jobs/
+  last_verified: 2026-10-17
+
+- name: JobLeads
+  url: https://www.jobleads.com/careers-at-jobleads
+  status: hiring
+  location: Europe
+  industries:
+    - Recruitment Platform
+  benefits:
+    - Choice of work equipment
+  linkedin: https://www.linkedin.com/company/jobleads-gmbh/jobs/
+  glassdoor: https://www.glassdoor.com/Overview/Working-at-JobLeads-EI_IE1036477.11,19.htm
+  last_verified: 2026-10-17
+
+- name: Eventhub
+  url: https://hr.eventhubhq.com/
+  status: hiring
+  location: Europe/Berlin time zone
+  industries:
+    - Sports
+    - Events
+  benefits:
+    - Flexible working hours
+    - Claude Code licenses
+    - Opportunities to attend sporting events
+  linkedin: https://www.linkedin.com/company/eventhubgmbh/jobs/
+  last_verified: 2026-10-17
